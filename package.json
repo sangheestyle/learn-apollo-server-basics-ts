@@ -1,12 +1,13 @@
 {
   "name": "learn-apollo-server-basics-ts",
   "version": "1.0.0",
-  "description": "Learn apollo server including express and graphql",
-  "main": "dst/server.js",
+  "description": "Learn apollo server (express, graphql, typescript)",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node dst/server.js",
-    "dev": "nodemon src/server.ts",
-    "build": "tsc -p ."
+      "start:dev": "npm run build:dev",
+      "build:dev": "nodemon 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,graphql",
+      "build": "tsc -p . && ncp src/schema dst/schema",
+      "start": "node dst/server.js"
   },
   "keywords": [],
   "author": "",
