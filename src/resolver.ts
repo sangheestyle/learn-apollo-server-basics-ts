@@ -11,6 +11,8 @@ const resolverMap:IResolvers = {
             info: GraphQLResolveInfo)
         :string {
             return `hello world, darren! can you see this?`;
-        },},};
+        },
+    },
+};
 
 export default resolverMap;
