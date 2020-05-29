@@ -1,0 +1,86 @@
+<development environment>
+
+manjaro linux 20.0
+vs-code 
+
+
+
+<commands>
+
+check versions of the required platform:
+$ node --version
+$ npm --version 
+
+install typescript globally:
+$ sudo npm i -g typescript
+$ tsc --version
+
+create app file:
+$ touch app.ts
+
+watch app file:
+$ tsc app.ts -w
+
+create tsconfig file:
+$ tsc --init
+
+edits on tsconfig:
+"outDir": "./dst",
+"rootDir": "./src", 
+"moduleResolution": "node",
+
+create folder:
+./src
+
+transpile from ts to js after set rootdir:
+$ tsc
+
+create package json file:
+$ npm init -y
+
+install express:
+$ npm i express
+
+install typescript locally:
+$ npm i -D typescript
+
+install ts-node:
+$ npm i -D ts-node
+
+install nodemon:
+$ npm i -D nodemon 
+
+install type system for node and express:
+$ npm i -D @types/node @types/express
+
+edits on package json file:
+  "scripts": {
+    "start": "node dst/app.js", 
+    "dev": "nodemon src/app.ts", 
+    "build": "tsc -p ."
+  },
+
+populate barebone functionality on app.ts file:
+write using application, request, response from express
+
+run at dev mode, which runs typescript file:
+$ npm run dev
+
+build the app, which transpile to javascript file:
+$ npm run build 
+
+start the app, which runs javascript file:
+$ npm start
+
+create gitignore:
+$ touch .gitignore
+
+edits on gitignore:
+node_modules
+
+load on git:
+$ git init
+$ git add .
+$ git commit -m "first commit"
+$ git remote add origin ...(what is given from github)...
+$ git push -u origin master
