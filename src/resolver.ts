@@ -1,12 +1,12 @@
 import { GraphQLResolveInfo } from 'graphql';
 import { IResolvers } from 'graphql-tools';
+import { Quote } from './type';
+import { quotes } from './fixture';
 
-import { quotes } from './schema';
 
 const resolverMap:IResolvers = {
     Query: {
-        quotes()
-        {
+        quotes():Quote[] {
             return quotes;
         },
     },
