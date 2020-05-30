@@ -1,0 +1,2 @@
+import { Quote } from './type';
+

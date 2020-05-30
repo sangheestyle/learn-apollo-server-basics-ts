@@ -3,11 +3,7 @@ import { makeExecutableSchema } from 'graphql-tools';
 import resolvers from './resolver';
 import { GraphQLSchema } from 'graphql';
 import gql from 'graphql-tag';
-
-type Quote = {
-    date:string
-    currency:string 
-}
+import { Quote } from './type';
 
 const quote_01 = {
     date : "3/1/2020",
