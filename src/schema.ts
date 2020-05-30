@@ -4,12 +4,31 @@ import resolvers from './resolver';
 import { GraphQLSchema } from 'graphql';
 import gql from 'graphql-tag';
 
+type Quote = {
+    date:string
+    currency:string 
+}
 
-// import * as typeDefs from './schema/schema.graphql';
+const quote_01 = {
+    date : "3/1/2020",
+    currency : "EUR"
+};
+
+const quote_02:Quote = {
+    date : "3/2/2020",
+    currency : "EUR"
+};
+
+export const quotes:Quote[] = [quote_01, quote_02];
 
 const typeDefs = gql`
-    type Query {
-        helloWorld: String!
+type Quote {
+date: String!
+currency: String!
+}
+
+type Query {
+        quotes: [Quote]
     }
 `;
 

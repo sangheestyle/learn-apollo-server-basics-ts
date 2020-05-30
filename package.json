@@ -4,8 +4,7 @@
   "description": "Learn apollo server (express, graphql, typescript)",
   "main": "src/server.js",
   "scripts": {
-    "start:dev": "npm run build:dev",
-    "build:dev": "nodemon 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,graphql",
+    "dev": "nodemon 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,graphql",
     "build": "tsc -p . && ncp src/schema dst/schema",
     "start": "node dst/server.js"
   },
