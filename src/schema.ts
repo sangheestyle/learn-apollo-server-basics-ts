@@ -9,11 +9,18 @@ const typeDefs = gql`
 type Quote {
     date: String!
     currency: String!
+    price: Float
+}
+
+type Deal {
+    quote: Quote
+    amount: Int 
 }
 
 type Query {
-        quotes: [Quote]
-    }
+    quotes: [Quote]
+    deals: [Deal]
+}
 
 `;
 
