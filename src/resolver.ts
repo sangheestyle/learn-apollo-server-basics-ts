@@ -1,5 +1,4 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { Context } from './models';
 import { IResolvers } from 'graphql-tools';
 
 const resolverMap:IResolvers = {
@@ -7,7 +6,7 @@ const resolverMap:IResolvers = {
         helloWorld(
             _: void,
             args: void,
-            cts: Context,
+            cts: void,
             info: GraphQLResolveInfo)
         :string {
             return `hello world, darren! can you see this?`;
