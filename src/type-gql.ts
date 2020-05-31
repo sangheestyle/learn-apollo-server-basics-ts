@@ -3,22 +3,26 @@ import gql from 'graphql-tag';
 const typeDefs = gql`
 
 type Quote {
-id:ID!
-date: String!
-currency: String!
-price: Float!
+    id : ID!
+    date : String!
+    currency : String!
+    price : Float!
 }
 
 type Deal {
-id:ID!
-quote: Quote!
-amount: Int!
+    id : ID!
+    quote : Quote!
+    amount : Int!
 }
 
 type Query {
-quotes: [Quote]!
-deals: [Deal]!
+    quotes : [Quote]
+    quote (id : ID) : Quote
+    deals : [Deal]
 }
+
+
+
 
 `;
 

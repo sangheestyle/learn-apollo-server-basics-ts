@@ -8,6 +8,11 @@ const resolvers:IResolvers = {
         quotes():Quote[] {
             return fixture_quotes;
         },
+        quote(root, args) {
+            return fixture_quotes.find(
+                fixture_quotes =>
+                    fixture_quotes.id === args.id);
+        },
         deals():Deal[] {
             return fixture_deals;
         }
