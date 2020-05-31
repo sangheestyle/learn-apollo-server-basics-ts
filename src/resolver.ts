@@ -3,7 +3,7 @@ import { IResolvers } from 'graphql-tools';
 import { Quote, Deal } from './type';
 import { fixture_quotes, fixture_deals } from './fixture';
 
-const resolverMap:IResolvers = {
+const resolvers:IResolvers = {
     Query: {
         quotes():Quote[] {
             return fixture_quotes;
@@ -14,4 +14,4 @@ const resolverMap:IResolvers = {
     },
 };
 
-export default resolverMap;
+export default resolvers;
