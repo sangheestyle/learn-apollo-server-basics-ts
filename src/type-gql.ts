@@ -19,11 +19,8 @@ type Query {
     quotes : [Quote]
     quote (id : ID) : Quote
     deals : [Deal]
+    deal (id : ID) : Deal
 }
-
-
-
-
 `;
 
 export default typeDefs;

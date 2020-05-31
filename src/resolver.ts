@@ -15,7 +15,12 @@ const resolvers:IResolvers = {
         },
         deals():Deal[] {
             return fixture_deals;
-        }
+        },
+        deal(root, args) {
+            return fixture_deals.find(
+                fixture_deals =>
+                    fixture_deals.id === args.id);
+        },
     },
 };
 
