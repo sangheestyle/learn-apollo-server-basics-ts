@@ -1,19 +1,18 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
-// import depthLimit from 'graphql-depth-limit';
+import depthLimit from 'graphql-depth-limit';
 import { createServer } from 'http';
 import compression from 'compression';
 import cors from 'cors';
-import { typeDefs } from './schema';
-import resolvers from './resolver';
+import schema from './schema';
+
 
 const app : express.Application = express();
 
 const server = new ApolloServer({
-    typeDefs,
-    resolvers // ,
-    // validationRules: [depthLimit(7)],
-    // playground: true,
+    schema,
+    validationRules: [depthLimit(7)],
+    playground: true,
 });
 
 app.use('*', cors());

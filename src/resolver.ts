@@ -1,6 +1,6 @@
 // import { GraphQLResolveInfo } from 'graphql';
 import { IResolvers } from 'graphql-tools';
-import { Quote, Deal } from './type';
+import { Quote, Deal } from './type-intrnl';
 import { fixture_quotes, fixture_deals } from './fixture';
 
 const resolvers:IResolvers = {

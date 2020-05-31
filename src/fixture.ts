@@ -1,4 +1,4 @@
-import { Quote, Deal } from './type';
+import { Quote, Deal } from './type-intrnl';
 
 const quote_01 = {
     id : 1,
