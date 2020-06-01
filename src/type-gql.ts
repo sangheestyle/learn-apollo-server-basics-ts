@@ -11,8 +11,9 @@ type Quote {
 
 type Deal {
     id : ID!
-    quote : Quote!
-    amount : Int!
+    open_quote : Quote!
+    close_quote : Quote
+    quantity : Int!
 }
 
 type Query {

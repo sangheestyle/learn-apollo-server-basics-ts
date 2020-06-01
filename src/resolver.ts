@@ -3,9 +3,9 @@ import { IResolvers } from 'graphql-tools';
 import { Quote, Deal } from './type-intrnl';
 import { fixture_quotes, fixture_deals } from './fixture';
 
-const resolvers:IResolvers = {
+const resolvers: IResolvers = {
     Query: {
-        quotes():Quote[] {
+        quotes(): Quote[] {
             return fixture_quotes;
         },
         quote(root, args) {
@@ -13,7 +13,7 @@ const resolvers:IResolvers = {
                 fixture_quotes =>
                     fixture_quotes.id === args.id);
         },
-        deals():Deal[] {
+        deals(): Deal[] {
             return fixture_deals;
         },
         deal(root, args) {
