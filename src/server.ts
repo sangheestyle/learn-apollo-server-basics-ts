@@ -6,7 +6,6 @@ import compression from 'compression';
 import cors from 'cors';
 import schema from './schema';
 
-
 const app: express.Application = express();
 
 const server = new ApolloServer({

@@ -4,15 +4,21 @@ type Quote {
     currency : String!
     price : Float!
 }
+
 type Deal {
     id : ID!
     open_quote : Quote!
     close_quote : Quote
     quantity : Int!
 }
+
 type Query {
     quotes : [Quote]
     quote (id : ID) : Quote
     deals : [Deal]
     deal (id : ID) : Deal
+}
+
+type Mutation {
+    updateDeal(id: ID!, open_quote_id: ID!, close_quote_id: ID!, quantity: Int!): Deal
 }
