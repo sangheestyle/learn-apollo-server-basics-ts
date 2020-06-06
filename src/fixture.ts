@@ -56,14 +56,14 @@ const deal_04 = {
     quantity: 22
 };
 
-export const fixture_quotes: Quote[] = [
+export const quotes: Quote[] = [
     quote_01,
     quote_02,
     quote_03,
     quote_04
 ];
 
-export const fixture_deals: Deal[] = [
+export const deals: Deal[] = [
     deal_01,
     deal_02,
     deal_03,
