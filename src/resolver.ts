@@ -2,6 +2,9 @@
 import { IResolvers } from 'graphql-tools';
 import { Quote, Deal } from './type';
 import { quotes, deals } from './fixture';
+import { pubsub } from './server';
+
+const DEAL_UPDATED = 'DEAL_UPDATED'
 
 const resolvers: IResolvers = {
     Query: {
@@ -22,9 +25,18 @@ const resolvers: IResolvers = {
             deal.open_quote = openQuote
             deal.close_quote = closeQuote
             deal.quantity = quantity
+
+            pubsub.publish(DEAL_UPDATED, {
+                dealUpdated: deal,
+            })
             
             return deal
         },
+    },
+    Subscription: {
+        dealUpdated: {
+            subscribe: () => pubsub.asyncIterator(DEAL_UPDATED)
+        }
     }
 };
 
